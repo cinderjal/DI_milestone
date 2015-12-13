@@ -39,7 +39,7 @@ def make_plot():
         end_date = today.strftime('%Y-%m-%d')
         start_date = (today - timedelta(days=90)).strftime('%Y-%m-%d')
 
-        data = Quandl.get(quandl_ticker, trim_start=start_date, trim_end=end_date,authtoken='5CuPA7VjjoTFsLezZMzr')
+        data = Quandl.get(quandl_ticker, trim_start=start_date, trim_end=end_date,authtoken)
     
         p = figure(title=title, x_axis_label="Date", y_axis_label="Price USD", x_axis_type = "datetime")
 
